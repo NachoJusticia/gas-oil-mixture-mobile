@@ -1,6 +1,10 @@
 import React from 'react';
+import {
+  Text
+} from 'react-native';
 import TouchableItem from 'react-navigation/src/views/TouchableItem';
 import Icon from 'react-native-vector-icons/MaterialIcons';
+import I18n from '../i18n';
 
 const OptionsButton = ({ onPress, iconName = 'more-vert' }) =>
   <TouchableItem
@@ -10,14 +14,13 @@ const OptionsButton = ({ onPress, iconName = 'more-vert' }) =>
       marginRight: 8,
     }}
   >
-    <Icon
-      name={iconName}
-      size={25}
-      style={{
-        padding: 8,
-        color: 'white',
-      }}
-    />
+    <Text style={{
+        color: 'grey',
+        paddingRight: 10,
+        fontSize: 12
+    }}>
+      {I18n.t('options')}
+    </Text>
   </TouchableItem>;
 
 export default OptionsButton;
